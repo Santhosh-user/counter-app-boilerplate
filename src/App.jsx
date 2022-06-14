@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <h2 data-testid="counter-value">{value}</h2>
-      <button data-testid="counter-decrement-button" onClick={handleChange1}>-</button>
+      <button disabled={value<=0 ? true: false} data-testid="counter-decrement-button" onClick={handleChange1}>-</button>
       <button data-testid="counter-increment-button" onClick={handleChange2}>+</button>
     </div>
   );
