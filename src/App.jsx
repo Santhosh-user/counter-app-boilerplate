@@ -5,19 +5,23 @@ function App() {
 
   const [value, setValue] = useState(0)
 
-  const handleChange=(e)=>{
-    if(value>-1){
-      setValue(e+value)
+  const handleChange1=()=>{
+    if(value>=1){
+      setValue(value-1)
     }
-    
   }
+  const handleChange2=()=>{
+   
+      setValue(value+1)
+  }
+
+
 
   return (
     <div className="App">
-      
       <h2 data-testid="counter-value">{value}</h2>
-      <button data-testid="counter-decrement-button" onClick={()=>{handleChange(1)}}>+</button>
-      <button data-testid="counter-increment-button" onClick={()=>{handleChange(-1)}}>-</button>
+      <button data-testid="counter-decrement-button" onClick={handleChange1}>-</button>
+      <button data-testid="counter-increment-button" onClick={handleChange2}>+</button>
     </div>
   );
 }
