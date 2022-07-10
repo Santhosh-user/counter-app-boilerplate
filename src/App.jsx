@@ -24,6 +24,7 @@ function App() {
       <button data-testid="counter-increment-button" onClick={handleChange2}>+</button>
     </div>
   );
+  
 }
 
 export default App;
